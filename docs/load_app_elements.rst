@@ -25,7 +25,7 @@ Values Used in this Example
     + application server port: 9999
 
 
-Load the iron-skillet templates as submodule
+Load the iron-skillet and mssp templates as submodule
 --------------------------------------------
 
 Start in the repo project root directory
@@ -35,7 +35,7 @@ Start in the repo project root directory
 
     cd src/iron-skillet/snippets
     git submodule add -b 81dev --force git@github.com:PaloAltoNetworks/iron-skillet.git ./skillet81
-
+    git submodule add -b 81dev --force git@github.com:scotchoaf/mssp-cnc.git ./gsb81
 
 Add and prep the pan-cnc submodule then start the server
 --------------------------------------------------------

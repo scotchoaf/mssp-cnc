@@ -1,0 +1,28 @@
+name: mssp
+
+views:
+
+  - name: ''
+    class: CNCView
+    menu: MSSP GSB
+    menu_option: Welcome
+    attributes:
+      template_name: pan_cnc/welcome.html
+    context:
+      title: Skillet
+      description: MSSP GSB Configurations
+      documentation_link: http://iron-skillet_panorama_dg.readthedocs.io
+
+  - name: gsbconfig
+    class: ChooseSnippetView
+    menu: GSB Config
+    menu_option: GSB Configuration
+    attributes:
+      #label_name: service_type
+      #label_value: internet_gateway
+      snippet: cnc-conf-gsb
+      header: Step 1
+      title: Select Configuration Option
+
+  - name: provision
+    class: ProvisionSnippetView
