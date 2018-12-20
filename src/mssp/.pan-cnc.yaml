@@ -15,7 +15,7 @@ views:
 
   - name: gsbconfig
     class: ChooseSnippetView
-    menu: GSB Config
+    menu: MSSP GSB
     menu_option: GSB Configuration
     attributes:
       #label_name: service_type

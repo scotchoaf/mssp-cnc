@@ -2,3 +2,11 @@
 	path = src/mssp/snippets/skillet81
 	url = git@github.com:PaloAltoNetworks/iron-skillet.git
 	branch = 81dev
+[submodule "src/mssp/snippets/gsb81"]
+	path = src/mssp/snippets/gsb81
+	url = git@github.com:scotchoaf/mssp-templates.git
+	branch = 81dev
+[submodule "cnc"]
+	path = cnc
+	url = git@github.com:PaloAltoNetworks/pan-cnc.git
+	branch = develop
