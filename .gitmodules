@@ -1,0 +1,4 @@
+[submodule "src/mssp/snippets/skillet81"]
+	path = src/mssp/snippets/skillet81
+	url = git@github.com:PaloAltoNetworks/iron-skillet.git
+	branch = 81dev
