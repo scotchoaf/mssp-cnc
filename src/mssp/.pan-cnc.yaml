@@ -4,7 +4,7 @@ views:
 
   - name: ''
     class: CNCView
-    menu: MSSP GSB
+    menu: MSSP Security Offerings
     menu_option: Welcome
     attributes:
       template_name: pan_cnc/welcome.html
@@ -15,14 +15,35 @@ views:
 
   - name: gsbconfig
     class: ChooseSnippetView
-    menu: MSSP GSB
-    menu_option: GSB Configuration
+    menu: MSSP Security Offerings
+    menu_option: Basic Internet Gateway
     attributes:
-      #label_name: service_type
-      #label_value: internet_gateway
       snippet: cnc-conf-gsb
-      header: Step 1
+      header: Initial Service Request
+      title: Select Configuration Option
+
+  - name: gpcsconfig
+    class: ChooseSnippetView
+    menu: MSSP Security Offerings
+    menu_option: Global Protect Cloud Service
+    attributes:
+      snippet: cnc-conf-gpcs
+      header: Initial Service Request
+      title: Select Configuration Option
+
+  - name: gpcscpeconfig
+    class: ChooseSnippetByLabelView
+    menu: MSSP Security Offerings
+    menu_option: GPCS CPE Helper Configs
+    attributes:
+      label_name: service_type
+      label_value: gpcs-cpe
+      header: Select CPE Type
       title: Select Configuration Option
 
   - name: provision
     class: ProvisionSnippetView
+
+
+
+
