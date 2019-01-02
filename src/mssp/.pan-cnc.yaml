@@ -1,5 +1,16 @@
 name: mssp
 
+repositories:
+  - name: Iron-Skillet-v81
+    url: https://github.com/PaloAltoNetworks/iron-skillet.git
+    branch: 81dev
+    destination_directory: skillet81
+    repositories:
+  - name: MSSP Templates
+    url:  https://github.com/scotchoaf/mssp-templates.git
+    branch: 81dev
+    destination_directory: gsb81
+
 views:
 
   - name: ''
@@ -20,6 +31,16 @@ views:
     attributes:
       snippet: cnc-conf-gsb
       header: Initial Service Request
+      title: Select Configuration Option
+
+  - name: gsbsetconfig
+    class: ChooseSnippetByLabelView
+    menu: MSSP Security Offerings
+    menu_option: GSB SET commands
+    attributes:
+      label_name: service_type
+      label_value: internet_gateway_set
+      header: Choose set command file
       title: Select Configuration Option
 
   - name: gpcsconfig
