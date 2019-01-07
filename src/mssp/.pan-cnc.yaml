@@ -29,9 +29,25 @@ views:
     menu: MSSP Security Offerings
     menu_option: Basic Internet Gateway
     attributes:
-      snippet: cnc-conf-gsb
+      snippet: cnc-conf-gsb-panorama
+      header: Initial Service Request
+      title: Select Configuration Options
+      next_url: gsbworkflow01
+
+  - name: gsbconfigpanos
+    class: ChooseSnippetView
+    menu: MSSP Security Offerings
+    menu_option: Basic Internet Gateway for PAN-OS
+    attributes:
+      snippet: cnc-conf-gsb-panos
       header: Initial Service Request
       title: Select Configuration Option
+      next_url: gsbworkflow01
+
+  - name: gsbworkflow01
+    class: gsbProvisionView
+    attributes:
+      next_url: provision
 
   - name: gsbsetconfig
     class: ChooseSnippetByLabelView
