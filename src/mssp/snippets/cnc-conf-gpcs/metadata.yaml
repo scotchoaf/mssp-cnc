@@ -29,9 +29,9 @@ variables:
       - key: 10 Mbps
         value: FWAAS-10Mbps
       - key: 25 Mbps
-        value: FWAAS-10Mbps
+        value: FWAAS-25Mbps
       - key: 100 Mbps
-        value: FWAAS-10Mbps
+        value: FWAAS-100Mbps
   - name: service_term
     description: Service Term
     default: 3 year
