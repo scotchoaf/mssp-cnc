@@ -6,8 +6,8 @@ class gsbProvisionView(ProvisionSnippetView):
     def generate_dynamic_form(self):
 
         simple_service = self.get_value_from_workflow('simple_service', '')
-
-        if simple_service == 'True':
+        print('simple service is ' + simple_service)
+        if simple_service == 'on':
             print('only showing device name field')
             self.fields_to_render += ['FW_NAME']
 
