@@ -106,3 +106,14 @@ venv.bak/
 #rubymine
 .idea/
 
+# ignore the added repos and not the app level elements
+**/snippets/**/
+!**/snippets/app
+!**/snippets/app/**
+!**/snippets/app/**/*
+__pycache__
+*pyc
+app/db.sqlite3
+local.env
+env
+.DS_Store
