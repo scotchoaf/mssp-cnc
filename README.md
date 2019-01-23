@@ -11,13 +11,26 @@ It interfaces with both Panorama and the firewall PAN-OS API interfaces.
 This uses the Gold-Silver-Bronze template set to configure tiered
 services based on MSSP offerings and device subscriptions.
 
+Templates include:
+
+    * internet gateway base config with interfaces, zones, routing
+
+    * gold/silver/bronze tier tags and security rules
+
+
 ### GPCS
 
 This is based on remote network access to the internet using GPCS
 
+Template elements include:
 
-### Using the application
+    * baseline GPCS config for new service onboarding
 
-(tbd based on final app development and packaging)
+    * remote network IPSEC onboarding
+
+    * sample CPE IPSEC configs that text render only, no API configuration
+
+
+
 
 
