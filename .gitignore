@@ -102,9 +102,18 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-<<<<<<< HEAD
 
 #rubymine
 .idea/
-=======
->>>>>>> c1d23cc2eec961c4b1e4b227f1b4bd7b46ae974a
+
+# ignore the added repos and not the app level elements
+**/snippets/**/
+!**/snippets/app
+!**/snippets/app/**
+!**/snippets/app/**/*
+__pycache__
+*pyc
+app/db.sqlite3
+local.env
+env
+.DS_Store
