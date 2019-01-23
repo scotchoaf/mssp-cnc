@@ -14,35 +14,17 @@ Prequisites
 Values Used in this Example
 ---------------------------
 
-    + repo name: ironskillet-cnc
-
-    + repo branch: 81dev
-
-    + pan-cnc submodule directory: cnc
 
     + Panorama IP address: 192.168.55.7
 
     + application server port: 9999
 
 
-Load the iron-skillet and mssp templates as submodule
---------------------------------------------
-
-Start in the repo project root directory
-
-
-::
-
-    cd src/mssp/snippets
-    git submodule add -b 81dev --force git@github.com:PaloAltoNetworks/iron-skillet.git ./skillet81
-    git submodule add -b 81dev --force git@github.com:scotchoaf/mssp-templates.git ./gsb81
-
 Add and prep the pan-cnc submodule then start the server
 --------------------------------------------------------
 
 ::
 
-    cd ../../..
     git submodule add -b develop --force git@github.com:PaloAltoNetworks/pan-cnc.git ./cnc
     cd cnc
     pip install -r requirements.txt
