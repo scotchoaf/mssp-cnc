@@ -14,27 +14,10 @@ Prequisites
 Values Used in this Example
 ---------------------------
 
-    + repo name: ironskillet-cnc
-
-    + repo branch: 81dev
-
-    + pan-cnc submodule directory: cnc
 
     + Panorama IP address: 192.168.55.7
 
     + application server port: 9999
-
-
-Load the iron-skillet templates as submodule
---------------------------------------------
-
-Start in the repo project root directory
-
-
-::
-
-    cd src/iron-skillet/snippets
-    git submodule add -b 81dev --force git@github.com:PaloAltoNetworks/iron-skillet.git ./skillet81
 
 
 Add and prep the pan-cnc submodule then start the server
@@ -42,13 +25,12 @@ Add and prep the pan-cnc submodule then start the server
 
 ::
 
-    cd ../../..
     git submodule add -b develop --force git@github.com:PaloAltoNetworks/pan-cnc.git ./cnc
     cd cnc
     pip install -r requirements.txt
     ./manage.py migrate
     ./manage.py shell -c "from django.contrib.auth.models import User; User.objects.create_superuser('vistoq', 'admin@example.com', 'vistoq')"
-    export PANORAMA_IP=192.168.55.7
+    export PANORAMA_IP=192.168.55.8
     export PANORAMA_USERNAME=admin
     export PANORAMA_PASSWORD=admin
     ./manage.py runserver 9999
