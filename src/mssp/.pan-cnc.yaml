@@ -1,10 +1,25 @@
 name: mssp
 
+repositories:
+# includes the panos v8.1 repo
+# can delete the dirs and update the branch to use different releases
+  - name: Iron-Skillet-v81
+    url: https://github.com/PaloAltoNetworks/iron-skillet.git
+    branch: panos_v8.1
+    destination_directory: iron_skillet_v81
+    repositories:
+# incremantal mssp configurations using iron-skillet
+# branch selected must match the sw version from skillet
+  - name: MSSP Templates
+    url:  https://github.com/scotchoaf/mssp-templates.git
+    branch: panos_v8.1
+    destination_directory: mssp_templates_v81
+
 views:
 
   - name: ''
     class: CNCView
-    menu: MSSP GSB
+    menu: MSSP Security Offerings
     menu_option: Welcome
     attributes:
       template_name: pan_cnc/welcome.html
@@ -13,16 +28,72 @@ views:
       description: MSSP GSB Configurations
       documentation_link: http://iron-skillet_panorama_dg.readthedocs.io
 
+# standard gold-silver-bronze config menu
+# uses gsbworkflow02 to set device-group and template/stack to fw name
+# panorama API centric
   - name: gsbconfig
     class: ChooseSnippetView
-    menu: GSB Config
-    menu_option: GSB Configuration
+    menu: MSSP Security Offerings
+    menu_option: Basic Internet Gateway
     attributes:
-      #label_name: service_type
-      #label_value: internet_gateway
-      snippet: cnc-conf-gsb
-      header: Step 1
+      snippet: cnc-conf-gsb-panorama
+      header: Initial Service Request
+      title: Select Configuration Options
+      next_url: gsbworkflow02
+
+# gold-silver-bronze configuration pushed to the fw w/out Panorama
+  - name: gsbconfigpanos
+    class: ChooseSnippetView
+    menu: MSSP Security Offerings
+    menu_option: Basic Internet Gateway for PAN-OS
+    attributes:
+      snippet: cnc-conf-gsb-panos
+      header: Initial Service Request
+      title: Select Configuration Option
+      next_url: gsbworkflow02
+
+# interim workflow that udpates device-group and template/stack names
+# see views.py for specifics
+  - name: gsbworkflow02
+    class: gsbWorkflow02
+    attributes:
+      next_url: provision
+
+# menu option and actions to render SET commands for the fw config
+  - name: gsbsetconfig
+    class: ChooseSnippetByLabelView
+    menu: MSSP Security Offerings
+    menu_option: GSB SET commands
+    attributes:
+      label_name: service_type
+      label_value: internet_gateway_set
+      header: Choose set command file
+      title: Select Configuration Option
+
+# GPCS config menu option for baseline and remote network
+  - name: gpcsconfig
+    class: ChooseSnippetView
+    menu: MSSP Security Offerings
+    menu_option: Global Protect Cloud Service
+    attributes:
+      snippet: cnc-conf-gpcs
+      header: Initial Service Request
+      title: Select Configuration Option
+
+# GPCS CPE config options grouped by vendor
+  - name: gpcscpeconfig
+    class: ChooseSnippetByLabelView
+    menu: MSSP Security Offerings
+    menu_option: GPCS CPE Helper Configs
+    attributes:
+      label_name: service_type
+      label_value: gpcs-cpe
+      header: Select CPE Type
       title: Select Configuration Option
 
   - name: provision
     class: ProvisionSnippetView
+
+
+
+
