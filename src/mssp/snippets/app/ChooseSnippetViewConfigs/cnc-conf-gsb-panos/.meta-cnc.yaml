@@ -48,12 +48,13 @@ variables:
         value: large
   - name: simple_service
     description: Auto-configure service values
-    default: on
-    type_hint: check
-  - name: simple_service2
-    description: Auto-configure service values again
-    default: on
-    type_hint: check
+    default: True
+    type_hint: dropdown
+    dd_list:
+      - key: Yes
+        value: True
+      - key: No
+        value: False
 
 snippets:
 
