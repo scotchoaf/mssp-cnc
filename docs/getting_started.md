@@ -1,3 +1,13 @@
+# MSSP CNC Quick Start
+
+The steps below are used to set the cnc environment and step through
+basic config template options.
+
+More details about template contents can be found at:
+
+[MSSP Template Docs](https://mssp-templates.readthedocs.io)
+
+
 # Activating the CNC Environment
 
 * Click on the lock image (upper right corner)
