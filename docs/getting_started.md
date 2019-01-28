@@ -26,3 +26,25 @@
 * Select ```Environments```
 
 * Configure or Load as required
+
+
+# Loading a Configuration
+
+* Activate the CNC environment to define which device is used for configuration
+
+* Choose the menu option
+
+    - Basic Internet Gateway: Loads G-S-B configuration to Panorama
+
+    - Basic Internet Gateway PAN-OS: Loads G-S-B config to a firewall
+
+    - GSB SET commands: Text render of set commands for copy/paste to a firewall
+
+    - Global Protect Cloud Service: config new cloud instance or new remote network
+
+    - GPCS CPE Helper Configs: text render for CPE-side device configs
+
+* Enter form values and step through the config panels
+
+* Submit of the environment API config device will initiate an API config push
+
