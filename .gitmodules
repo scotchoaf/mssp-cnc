@@ -2,4 +2,4 @@
 [submodule "cnc"]
 	path = cnc
 	url = git@github.com:PaloAltoNetworks/pan-cnc.git
-	branch = develop
+	branch = master
