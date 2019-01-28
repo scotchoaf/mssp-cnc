@@ -26,7 +26,7 @@ views:
     context:
       title: Skillet
       description: MSSP GSB Configurations
-      documentation_link: http://iron-skillet_panorama_dg.readthedocs.io
+      documentation_link: http://mssp-templates.readthedocs.io
 
 # standard gold-silver-bronze config menu
 # uses gsbworkflow02 to set device-group and template/stack to fw name
