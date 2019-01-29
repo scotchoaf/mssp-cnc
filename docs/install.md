@@ -3,7 +3,7 @@
 
 The easiest way to run the mssp application is to pull the docker container:
 
-    docker run -p 8888:80 scotchoaf/mssp-cnc
+    docker run -p 8888:80 scotchoaf/mssp_cnc
 
 Then access the UI via http://localhost:8888
 

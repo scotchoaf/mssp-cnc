@@ -14,6 +14,10 @@ More details about template contents can be found at:
 
 * Enter the master passphrase
 
+**NOTE:** when the system prompts for the passphrase initially and no passphrase
+has been created, it will use that value to create the passphrase. This
+passphrase is unique to the local system.
+
 * If an existing environment, choose ```Load``` to activate
 
 ### Creating a New Environment
