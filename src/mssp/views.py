@@ -41,6 +41,10 @@ class gsbProvisionView(ProvisionSnippetView):
 
     def generate_dynamic_form(self):
 
+        # get customer name and use for fw name
+        customer_name = self.get_value_from_workflow('customer_name', '')
+        self.save_value_to_workflow('FW_NAME', customer_name)
+
         simple_service = self.get_value_from_workflow('simple_service', '')
         print('simple service is ' + simple_service)
         if simple_service == 'True':
@@ -70,6 +74,10 @@ class gsbWorkflow02(ProvisionSnippetView):
         hidden fields
         :return: field lists for form generation
         """
+
+        # get customer name and use for fw name
+        customer_name = self.get_value_from_workflow('customer_name', '')
+        self.save_value_to_workflow('FW_NAME', customer_name)
 
         simple_service = self.get_value_from_workflow('simple_service', '')
         print('simple service is ' + simple_service)

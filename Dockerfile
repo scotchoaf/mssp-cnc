@@ -1,4 +1,4 @@
-FROM python:alpine
+FROM python:3.6-alpine
 
 LABEL description="MSSP-CNC"
 LABEL version="0.1.1"

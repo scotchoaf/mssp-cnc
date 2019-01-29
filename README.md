@@ -2,7 +2,7 @@
 # MSSP Configuration Loader
 
 This utility is provided to enable API-based configuration using the
-[Palo Alto Networks MSSP templates](https://github.com/scotchoaf/mssp-templates/tree/81dev)
+[Palo Alto Networks MSSP templates](https://github.com/scotchoaf/mssp-templates/tree/panos_v8.1)
 
 It interfaces with both Panorama and the firewall PAN-OS API interfaces.
 
@@ -31,9 +31,6 @@ Template elements include:
     * sample CPE IPSEC configs that text render only, no API configuration
 
 
-### Using the application
-
-The initial
 
 
 

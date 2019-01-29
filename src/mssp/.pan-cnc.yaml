@@ -26,7 +26,7 @@ views:
     context:
       title: Skillet
       description: MSSP GSB Configurations
-      documentation_link: http://mssp-templates.readthedocs.io
+      documentation_link: https://github.com/scotchoaf/mssp-cnc/blob/master/docs/getting_started.md
 
 # standard gold-silver-bronze config menu
 # uses gsbworkflow02 to set device-group and template/stack to fw name
